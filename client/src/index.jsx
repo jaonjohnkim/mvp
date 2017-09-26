@@ -125,9 +125,12 @@ class App extends React.Component {
     console.log(e)
   }
   setMarker() {
-    // this.state.markers.forEach((marker) => {
-    //   marker.setMap(null);
-    // });
+    console.log("This.state.markers", this.state.markers);
+    if (this.state.markers){
+      this.state.markers.forEach((marker) => {
+        marker.setMap(null);
+      });
+    }
     var places = this.state.places.slice();
     var newMarkers = places.map((place, i) => {
       var loc = place.geometry.location;
@@ -170,6 +173,7 @@ class App extends React.Component {
         polylines: result[1].overview_polyline.points
       }, () => {
         this.rerenderPolylines(this.state.polylines);
+        this.setMarker();
       });
       
     })
