@@ -15,11 +15,18 @@ export const Container = (props) => {
   }
   return (
     <span id='map' style={style}>
-      <Maps google={props.google} places={props.places} addLoc={props.addLoc} />
+      <Maps 
+        google={props.google} 
+        places={props.places} 
+        addLoc={props.addLoc} 
+        polylines={props.polylines} 
+        rerenderPolylines={props.rerenderPolylines}
+        setMarker={props.setMarker}/>
     </span>
   )
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyAjaH64iexZfc15tcqoIMCRcz0Yt_7e-3Y'
+  apiKey: 'AIzaSyAjaH64iexZfc15tcqoIMCRcz0Yt_7e-3Y',
+  libraries: ['places', 'geometry']
 })(Container)

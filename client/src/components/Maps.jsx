@@ -33,7 +33,7 @@ class Maps extends React.Component {
         center: center,
         zoom: zoom
       })
-      this.map = new maps.Map(document.getElementById('map'), mapConfig);
+      window.map = new maps.Map(document.getElementById('map'), mapConfig);
       var input = document.getElementById('searchBox');
       var searchBox = new google.maps.places.SearchBox(input);
       var context = this;
@@ -41,8 +41,42 @@ class Maps extends React.Component {
         var places = searchBox.getPlaces();
         context.props.addLoc(places);
       })
+      // if (this.props.markers) {
+      //   this.props.markers.forEach((marker) => {
+      //     marker.setMap(null);
+      //   })
+      // }
+      // this.props.places.forEach((place, i) => {
+      //   var loc = place.geometry.location;
+      //   var lat = loc.lat();
+      //   var lng = loc.lng();
+      //   var marker = new google.maps.Marker({
+      //     position: {lat: lat, lng: lng},
+      //     label: i+1 + '',
+      //     map: window.map
+      //   });
+      // });
+      this.props.setMarker();
+      var bounds = map.getBounds()
+      window.map.fitBounds(bounds);
+
+      this.props.rerenderPolylines(this.props.polylines);
     }
   }
+
+  // renderPolylines(poly) {
+  //   var polyline = new google.maps.Polyline({
+  //     path: google.maps.geometry.encoding.decodePath(poly),
+  //     map: window.map
+  //   });
+  //   var bounds = new google.maps.LatLngBounds();
+  //   for (var i = 0; i < polyline.getPath().getLength(); i++) {
+  //     bounds.extend(polyline.getPath().getAt(i));
+  //   }
+  //   window.map.fitBounds(bounds);
+    
+  // }
+  
   render () {
     return (
       <div ref='map' ></div>
