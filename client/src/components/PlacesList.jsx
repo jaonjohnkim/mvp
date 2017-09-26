@@ -10,8 +10,12 @@ const PlacesList = (props) => {
     border: '1px solid black'
   }
   return(
-  <div style={style}>
-    <PlacesListEntry />
+  <div><button onClick={props.optimize}>Optimize!</button>
+    <ul style={style}>
+      {props.places.map((location, i) => {
+        return <PlacesListEntry place={location} order={i} key={i} del={props.del}/>
+      })}
+    </ul>
   </div>
 )
 }

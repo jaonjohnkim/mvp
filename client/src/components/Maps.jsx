@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class Maps extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -36,6 +36,11 @@ class Maps extends React.Component {
       this.map = new maps.Map(document.getElementById('map'), mapConfig);
       var input = document.getElementById('searchBox');
       var searchBox = new google.maps.places.SearchBox(input);
+      var context = this;
+      searchBox.addListener('places_changed', () => {
+        var places = searchBox.getPlaces();
+        context.props.addLoc(places);
+      })
     }
   }
   render () {
