@@ -61,7 +61,7 @@ app.post('/optimize', (req, res) => {
     });
     console.log(times);
     // res.status(200).send(times);
-    res.status(200).send([1, result[1].json.routes[0]]);
+    res.status(200).send([0, result[0].json.routes[0]]);
   })
   
 
