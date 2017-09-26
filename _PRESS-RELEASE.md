@@ -18,27 +18,28 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
-
+  Planning Buddy
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-
+  For those hardworkers who need a break from work. 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
+  Going on a trip is supposed to be fun, but a lot of work goes into planning: looking up ratings, minimizing travel time, and knowing when to go somewhere. Just tell Planning Buddy the list of things you would like to do, and Planning Buddy will make sure that you and your friends will have a good time. And if you don't like Planning Buddy's recommendation, you can always tweak things afterwards! Saving and sharing your itinerary with your friends is as easy as copying and pasting the link.
 ## Problem ##
   > Describe the problem your product solves.
-
+  Planning Buddy aims to minimize the time and effort that goes into planning any trip.
 ## Solution ##
   > Describe how your product elegantly solves the problem.
-
+  
 ## Quote from You ##
   > A quote from a spokesperson in your company.
-
+  "You thought google"
 ## How to Get Started ##
   > Describe how easy it is to get started.
-
+  Add locations to your list of to-dos by their name and address, and then click Plan-It!
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
+  
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  

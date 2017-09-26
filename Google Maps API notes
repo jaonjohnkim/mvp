@@ -1,0 +1,40 @@
+Travel Time Calculation:
+
+https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=944+Market+St+San+Francisco,+CA|
+934+Howard+St+San+Francisco,+CA|
+922+Folsom+St+San+Francisco,+CA|
+966+Mission+St+San+Francisco,+CA&destinations=944+Market+St+San+Francisco,+CA|
+934+Howard+St+San+Francisco,+CA|
+922+Folsom+St+San+Francisco,+CA|
+966+Mission+St+San+Francisco,+CA&key=AIzaSyAjaH64iexZfc15tcqoIMCRcz0Yt_7e-3Y
+
+Locations:
+944+Market+St+San+Francisco,+CA|
+934+Howard+St+San+Francisco,+CA|
+922+Folsom+St+San+Francisco,+CA|
+966+Mission+St+San+Francisco,+CA
+
+https://maps.googleapis.com/maps/api/directions/json?
+origin=944+Market+St+San+Francisco,+CA&
+destination=922+Folsom+St+San+Francisco,+CA&
+waypoints=966+Mission+St+San+Francisco,+CA
+|via:934+Howard+St+San+Francisco,+CA&
+key=AIzaSyAjaH64iexZfc15tcqoIMCRcz0Yt_7e-3Y
+
+&departure_time=1343641500
+
+&callback=mapInit
+
+&destination=place_id:ChIJA01I-8YVhkgRGJb0fW4UX7Y
+
+
+|via:934+Howard+St+San+Francisco,+CA
+
+Travel Map View:
+
+var polyline = new google.maps.Polyline({
+    path: google.maps.geometry.encoding.decodePath(json.overview_polyline.points),
+    map: map
+});
+
+https://stackoverflow.com/questions/40877840/google-maps-api-draw-a-route-using-points-of-a-polyline
